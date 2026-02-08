@@ -18,18 +18,18 @@
       background: #ffffff;
       color: #000000;
       min-height: 100vh;
-      padding: 40px 80px 100px;           /* reduced top padding → logo closer to top */
+      padding: 30px 80px 100px;           /* reduced top padding further */
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;            /* align content to left */
       overflow-x: hidden;
     }
 
     .logo {
-      max-width: 294px;                   /* 420px × 0.7 = ~294px → 70% smaller */
+      max-width: 147px;                   /* 294px × 0.5 = 147px (another 50% smaller) */
       width: 100%;
       height: auto;
-      margin: 0 auto 40px;                /* centered + reduced bottom margin */
+      margin: 0 0 30px 0;                 /* no bottom margin needed when top-left */
       display: block;
     }
 
@@ -67,11 +67,11 @@
     /* Mobile adjustments */
     @media (max-width: 768px) {
       body {
-        padding: 30px 30px 80px;          /* even tighter top on tablets */
+        padding: 20px 30px 80px;
       }
       .logo {
-        max-width: 224px;                 /* 320px × 0.7 ≈ 224px */
-        margin-bottom: 30px;
+        max-width: 112px;                 /* 224px × 0.5 ≈ 112px */
+        margin: 0 0 25px 0;
       }
       .tagline-container {
         font-size: clamp(1.0rem, 4.2vw, 1.5rem);
@@ -84,11 +84,11 @@
 
     @media (max-width: 480px) {
       body {
-        padding: 24px 24px 60px;
+        padding: 16px 24px 60px;
       }
       .logo {
-        max-width: 196px;                 /* 280px × 0.7 ≈ 196px */
-        margin-bottom: 28px;
+        max-width: 98px;                  /* 196px × 0.5 ≈ 98px */
+        margin: 0 0 20px 0;
       }
       .tagline-container {
         font-size: clamp(0.95rem, 4.5vw, 1.35rem);
